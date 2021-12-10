@@ -17,7 +17,7 @@ const Cards = () => {
     const getCards = async () => {
       const { data } = await supabase
         .from("cards")
-        .select("id")
+        .select("id,title")
         .eq("creator", user.id);
       setCards(data);
     };
@@ -28,7 +28,7 @@ const Cards = () => {
       creator: user.id,
     });
     console.log(data);
-    router.push(`/cards/${data.id}`);
+    router.push(`/cards/${data[0].id}`);
   };
   return (
     <div>
@@ -40,7 +40,9 @@ const Cards = () => {
       {cards.map((card) => (
         <div key={card.id}>
           <Link href={`/cards/${card.id}`}>
-            <a>{card.id}</a>
+            <a>
+              {card.id} / {card.title}
+            </a>
           </Link>
         </div>
       ))}
