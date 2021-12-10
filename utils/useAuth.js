@@ -16,20 +16,22 @@ export const AuthProvider = ({ children }) => {
     return supabase.auth.onAuthStateChange(async (_event, session) => {
       if (session) {
         if (!session.user.user_metadata.profile_added) {
+          const username =
+            session.user.user_metadata.name ||
+            session.user.user_metadata.full_name ||
+            session.user.email.split("@")[0];
           await supabase.from("profiles").insert(
             {
-              id: user.id,
-              username:
-                user.user_metadata.name ||
-                user.user_metadata.full_name ||
-                user.email.split("@")[0],
+              id: session.user.id,
+              username,
+              avatar: session.user.user_metadata.avatar_url ?? null,
             },
             {
               returning: "minimal",
             }
           );
           const { user } = await supabase.auth.update({
-            data: { profile_added: true },
+            data: { profile_added: true, username },
           });
           session.user = user;
         }

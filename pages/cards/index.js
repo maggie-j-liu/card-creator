@@ -38,7 +38,7 @@ const Cards = () => {
       </button>
       <h2>your cards</h2>
       {cards.map((card) => (
-        <div>
+        <div key={card.id}>
           <Link href={`/cards/${card.id}`}>
             <a>{card.id}</a>
           </Link>
