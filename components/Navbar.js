@@ -7,9 +7,12 @@ const Navbar = () => {
   return (
     <nav className="h-16 bg-red-100 px-8">
       <div className="h-full max-w-5xl mx-auto flex items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center gap-8">
           <Link href="/">
             <a>Card Creator</a>
+          </Link>
+          <Link href="/cards">
+            <a>Create</a>
           </Link>
         </div>
         <div className="flex items-center">
