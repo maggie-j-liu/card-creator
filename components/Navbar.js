@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { supabase } from "../utils/supabaseClient";
 import useAuth from "../utils/useAuth";
 import Avatar from "boring-avatars";
@@ -9,8 +10,14 @@ const Navbar = () => {
     <nav className="h-16 bg-red-100 px-8">
       <div className="h-full max-w-5xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <Link href="/">
-            <a>Card Creator</a>
+          <Link href="/" passHref>
+            <Image
+              src="/icon.png"
+              alt="Mail with colorful lights."
+              width={50}
+              height={50}
+              className="cursor-pointer"
+            />
           </Link>
           <Link href="/cards">
             <a>Create</a>
