@@ -3,12 +3,13 @@ import useAuth from "../../utils/useAuth";
 import { useRouter } from "next/router";
 import { supabase } from "../../utils/supabaseClient";
 import Link from "next/link";
+import Tilt from "../../components/Tilt";
 
 const Cards = () => {
   const { user, loading } = useAuth();
   const router = useRouter();
   const [cards, setCards] = useState([]);
-  const [cardsLoading, setCardsLoading] = useState(true)
+  const [cardsLoading, setCardsLoading] = useState(true);
   useEffect(() => {
     if (loading) return;
     if (!user) {
@@ -39,23 +40,34 @@ const Cards = () => {
         <button type="button" onClick={() => createCard()}>
           Create a New Card
         </button>
-        {cardsLoading
-        ? <section className="grid gap-5 md:grid-cols-2 animate-pulse">
-            {[...Array(4)].map((_, i) => <div className="p-5 text-gray-100 bg-gray-100 rounded-lg cursor-default" key={i}>Loading...</div>)}
-        </section>
-        : <section className="grid gap-5 md:grid-cols-2">
-          {cards.map((card) => (
-            <div key={card.id} className="h-max">
-              <Link href={`/cards/${card.id}`} passHref>
-                <div className="p-5 transition-shadow rounded-lg shadow-lg cursor-pointer hover:shadow-xl">
-                  <h2>{card.title}</h2>
-                  <p className="font-mono">{card.id}</p>
-                  {console.info(card)}
-                </div>
-              </Link>
-            </div>
-          ))}
-        </section>}
+        {cardsLoading ? (
+          <section className="grid gap-5 md:grid-cols-2 animate-pulse">
+            {[...Array(4)].map((_, i) => (
+              <div
+                className="p-5 text-gray-100 bg-gray-100 rounded-lg cursor-default"
+                key={i}
+              >
+                Loading...
+              </div>
+            ))}
+          </section>
+        ) : (
+          <section className="grid gap-5 md:grid-cols-2">
+            {cards.map((card) => (
+              <div key={card.id} className="h-max">
+                <Link href={`/cards/${card.id}`} passHref>
+                  <Tilt>
+                    <div className="p-5 transition-shadow rounded-lg shadow-lg cursor-pointer hover:shadow-3xl border-red-300 border-2">
+                      <h2>{card.title}</h2>
+                      <p className="font-mono">{card.id}</p>
+                      {console.info(card)}
+                    </div>
+                  </Tilt>
+                </Link>
+              </div>
+            ))}
+          </section>
+        )}
       </main>
     </div>
   );

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { supabase } from "../utils/supabaseClient";
 import useAuth from "../utils/useAuth";
 import Avatar from "boring-avatars";
+import Icon from "supercons";
 
 const Navbar = () => {
   const { user, loading } = useAuth();
@@ -10,8 +11,14 @@ const Navbar = () => {
     <nav className="h-16 px-8 bg-red-100">
       <div className="flex items-center justify-between h-full max-w-5xl mx-auto">
         <div className="flex items-center gap-8">
-          <Link href="/">
-            <a>Card Creator</a>
+          <Link href="/" passHref>
+            <Image
+              src="/icon.png"
+              alt="Mail with colorful lights."
+              width={50}
+              height={50}
+              className="cursor-pointer"
+            />
           </Link>
           <Link href="/cards">
             <a>Create</a>
@@ -39,13 +46,25 @@ const Navbar = () => {
                 )}
                 <div>{user.user_metadata.username}</div>
                 <span className="mx-2">&bull;</span>
-                <button onClick={() => supabase.auth.signOut()}>
-                  Sign Out
+                <button
+                  onClick={() => supabase.auth.signOut()}
+                  className="flex flex-row"
+                >
+                  Sign out&nbsp;
+                  <Icon glyph="door-leave" size={25} color="black" />
                 </button>
               </>
             ) : (
-              <Link href="/sign-in">
-                <a>Sign In</a>
+              <Link href="/sign-in" passHref>
+                <button className="flex flex-row">
+                  Sign In{" "}
+                  <Icon
+                    glyph="door-enter"
+                    size={25}
+                    color="black"
+                    className="ml-2"
+                  />
+                </button>
               </Link>
             ))}
         </div>
