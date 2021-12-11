@@ -54,17 +54,17 @@ const Cards = () => {
         ) : (
           <section className="grid gap-5 md:grid-cols-2">
             {cards.map((card) => (
-              <div key={card.id} className="h-max">
-                <Link href={`/cards/${card.id}`} passHref>
-                  <Tilt>
-                    <div className="p-5 transition-shadow rounded-lg shadow-lg cursor-pointer hover:shadow-3xl border-red-300 border-2">
+              <Tilt key={card.id}>
+                <div className="h-max">
+                  <Link href={`/cards/${card.id}`} passHref>
+                    <div className="p-5 transition-shadow border-2 border-red-300 rounded-lg shadow-lg cursor-pointer hover:shadow-3xl">
                       <h2>{card.title}</h2>
                       <p className="font-mono">{card.id}</p>
                       {console.info(card)}
                     </div>
-                  </Tilt>
-                </Link>
-              </div>
+                  </Link>
+                </div>
+              </Tilt>
             ))}
           </section>
         )}
