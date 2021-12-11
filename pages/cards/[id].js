@@ -24,7 +24,7 @@ const AddPrompt = ({setSaving, id, user, setAddMessage}) => {
   }
   return (
     <section className="fixed top-0 flex items-center justify-center w-screen h-screen bg-white bg-opacity-40" onClick={() => destroySelf()} id="add">
-      <div className="w-9/12 p-10 space-y-5 bg-white rounded-lg shadow-lg h-3/4 top-1/2">
+      <div className="w-9/12 p-10 space-y-5 bg-white rounded-lg shadow-lg h-3/4 top-1/2" onClick={(e) => e.stopPropagation()}>
         <section className="space-y-2">
           <h1>Add a message</h1>
           <p className="text-lg lg:text-2xl">Drop off your own message to add onto this card.</p>
