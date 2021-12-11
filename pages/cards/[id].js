@@ -26,7 +26,7 @@ const AddPrompt = ({setSaving, id, user, setAddMessage}) => {
     <section className="fixed top-0 flex items-center justify-center w-screen h-screen bg-white bg-opacity-40" onClick={() => destroySelf()} id="add">
       <div className="w-9/12 p-10 space-y-5 bg-white rounded-lg shadow-lg h-3/4 top-1/2">
         <section className="space-y-2">
-          <h1 className="text-3xl font-bold lg:text-5xl">Add a message</h1>
+          <h1>Add a message</h1>
           <p className="text-lg lg:text-2xl">Drop off your own message to add onto this card.</p>
         </section>
         <textarea
@@ -34,7 +34,7 @@ const AddPrompt = ({setSaving, id, user, setAddMessage}) => {
           onChange={(e) => setMessage(e.target.value)}
           className="w-full p-2 border border-gray-200 rounded-lg h-1/2"
         />
-        <button onClick={() => addMessage()} className="px-3 py-1 bg-red-200 rounded-md">Add message</button>
+        <button onClick={() => addMessage()}>Add message</button>
       </div>
     </section>
   )
@@ -73,9 +73,9 @@ const Card = ({
             <input type={"text"} value={title} onChange={(e) => setTitle(e.target.value)} className="w-full text-4xl font-bold lg:text-6xl"/>
             <p className="text-lg lg:text-2xl">by {creator}</p>
           </section>
-          <button type="button" className="px-3 py-1 bg-red-200 rounded-md h-fit" onClick={() => setAddMessage(true)}>Add a message</button>
+          <button type="button" className="h-fit" onClick={() => setAddMessage(true)}>Add a message</button>
           <button
-            className="fixed px-3 py-1 bg-red-200 rounded-md bottom-10 right-10"
+            className="fixed bottom-10 right-10"
             onClick={() => save()}
             disabled={saving}
           >
