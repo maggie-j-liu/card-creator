@@ -52,7 +52,7 @@ const Cards = () => {
             ))}
           </section>
         ) : (
-          <section className="grid gap-5 md:grid-cols-2">
+          <section className="grid gap-5 md:gap-10 md:grid-cols-2">
             {cards.map((card) => (
               <Tilt key={card.id}>
                 <div className="h-max">
