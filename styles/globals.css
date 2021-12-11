@@ -12,6 +12,6 @@
     }
 
     button {
-        @apply px-3 py-1 !bg-red-200 rounded-md;
+        @apply px-3 py-1 !bg-red-200 rounded-md shadow-red-200 shadow-sm hover:shadow-red-200 hover:shadow-md transition-shadow;
     }
 }
