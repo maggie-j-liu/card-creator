@@ -8,6 +8,7 @@ const Cards = () => {
   const { user, loading } = useAuth();
   const router = useRouter();
   const [cards, setCards] = useState([]);
+  const [cardsLoading, setCardsLoading] = useState(true)
   useEffect(() => {
     if (loading) return;
     if (!user) {
@@ -20,6 +21,7 @@ const Cards = () => {
         .select("id,title")
         .eq("creator", user.id);
       setCards(data);
+      setCardsLoading(false);
     };
     getCards();
   }, [user, loading]);
@@ -31,21 +33,30 @@ const Cards = () => {
     router.push(`/cards/${data[0].id}`);
   };
   return (
-    <div>
-      <h1>create a card</h1>
-      <button type="button" onClick={() => createCard()}>
-        Create
-      </button>
-      <h2>your cards</h2>
-      {cards.map((card) => (
-        <div key={card.id}>
-          <Link href={`/cards/${card.id}`}>
-            <a>
-              {card.id} / {card.title}
-            </a>
-          </Link>
-        </div>
-      ))}
+    <div className="flex justify-center">
+      <main className="w-9/12 min-h-screen pt-10 space-y-5">
+        <h1>Your Cards</h1>
+        <button type="button" onClick={() => createCard()}>
+          Create a New Card
+        </button>
+        {cardsLoading
+        ? <section className="grid gap-5 md:grid-cols-2 animate-pulse">
+            {[...Array(4)].map((_, i) => <div className="p-5 text-gray-100 bg-gray-100 rounded-lg cursor-default" key={i}>Loading...</div>)}
+        </section>
+        : <section className="grid gap-5 md:grid-cols-2">
+          {cards.map((card) => (
+            <div key={card.id} className="h-max">
+              <Link href={`/cards/${card.id}`} passHref>
+                <div className="p-5 transition-shadow rounded-lg shadow-lg cursor-pointer hover:shadow-xl">
+                  <h2>{card.title}</h2>
+                  <p className="font-mono">{card.id}</p>
+                  {console.info(card)}
+                </div>
+              </Link>
+            </div>
+          ))}
+        </section>}
+      </main>
     </div>
   );
 };
