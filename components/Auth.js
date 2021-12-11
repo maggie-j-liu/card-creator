@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../utils/supabaseClient";
 import Image from "next/image";
+import Icon from "supercons";
 
 export default function Auth() {
   const signInWithProvider = async (provider) => {
@@ -18,15 +19,19 @@ export default function Auth() {
     <div className="flex justify-center">
       <main className="flex flex-col items-center justify-center w-9/12 h-[90vh] space-y-5">
         <h1>To continue, please sign in.</h1>
-        <p className="text-xl lg:text-2xl">Signing in is required to keep track of the cards you&#39;ve created and interacted with.</p>
+        <p className="text-xl lg:text-2xl">
+          Signing in is required to keep track of the cards you&#39;ve created
+          and interacted with.
+        </p>
         <button
           onClick={(e) => {
             e.preventDefault();
             signInWithProvider("google");
           }}
-          className="px-4 py-2 font-semibold text-gray-700 bg-white rounded-lg shadow-md hover:bg-gray-50"
+          className="px-4 py-2 font-semibold text-gray-700 bg-white rounded-lg shadow-md hover:bg-gray-50 flex items-center"
         >
-          Sign In With Google
+          <Icon glyph="google" size={30} />
+          &nbsp;Sign In With Google
         </button>
       </main>
     </div>
