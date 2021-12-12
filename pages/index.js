@@ -11,7 +11,7 @@ export default function Home() {
           Spread the holiday cheer by sending a virtual holiday card with Card
           Creator idk. 🎁
         </p>
-        <Link href="/create" passHref>
+        <Link href="/cards" passHref>
           <button className="w-40 mx-auto my-4">Get Started</button>
         </Link>
       </div>
