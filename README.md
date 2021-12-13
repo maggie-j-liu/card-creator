@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./public/icon.png" width="300">
+<img src="./public/icon.png" width="100">
 <h1>Card Creator 💌</h1>
 </div>
 
