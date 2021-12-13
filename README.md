@@ -26,7 +26,7 @@ We used Supabase for authentication and store profile information so that users 
 
 ### Future
 
-As busy high school students, we were not able to finish the project before the deadline due to final exams and school activities. However, some features we would have liked to implement in our project are \***\*\_\_\*\***.
+As busy high school students, we were not able to finish the project before the deadline due to final exams and school activities. However, some features we would have liked to implement in our project are allowing the avatars on the card to be draggable, providing customization options for the font, color and patterns on the card and creating options for keeping the card private or publicly accessible.
 
 ## Develop
 
