@@ -6,12 +6,12 @@ import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  console.info(router, router.pathname.includes("/gift"))
+  const { gift } = router.query;
 
   return (
     <AuthProvider>
       <Meta />
-      {!(router.pathname.includes("/gift")) && <Navbar />}
+      {!(router.pathname.includes("/gift")) || !gift && <Navbar />}
       <Component {...pageProps} />
     </AuthProvider>
   );

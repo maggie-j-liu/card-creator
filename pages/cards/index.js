@@ -64,7 +64,6 @@ const Cards = () => {
                           https://cardcreator.vercel.app/cards/{card.id}
                         </a>
                       </Link>
-                      {console.info(card)}
                     </div>
                   </Link>
                 </div>

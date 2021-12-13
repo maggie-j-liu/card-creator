@@ -62,6 +62,7 @@ const Card = ({
   const [addMessage, setAddMessage] = useState(false);
   const { user, loading } = useAuth();
   const router = useRouter();
+  const { gift } = router.query;
   useEffect(() => {
     if (loading) return;
     if (!user) {
@@ -76,15 +77,16 @@ const Card = ({
   };
   return (
     <>
-      <div className="my-32 flex flex-col items-center justify-center">
-        <p className="px-8 text-center text-lg">
+      <div className="flex flex-col items-center justify-center my-32">
+        {!gift &&
+        <p className="px-8 mb-10 text-lg text-center">
           Gift this card to someone by sending them this link:{" "}
           <Link href={`/gift/${id}`}>
             <a className="font-bold text-red-400">
               https://cardcreator.vercel.app/gift/{id}
             </a>
           </Link>
-        </p>
+        </p>}
         <main className="w-9/12 min-h-screen p-16 space-y-10 shadow-2xl rounded-2xl">
           <section className="flex flex-col space-y-5 lg:flex-row lg:items-center lg:space-y-0">
             <section className="flex-grow space-y-2">
@@ -99,27 +101,31 @@ const Card = ({
                 {creator.username}
               </p>
             </section>
-            <button
-              type="button"
-              className="h-fit"
-              onClick={() => setAddMessage(true)}
-            >
-              Add a message
-            </button>
-            <button
-              className="fixed bottom-10 right-10"
-              onClick={() => save()}
-              disabled={saving}
-            >
-              Save
-            </button>
+            {!gift &&
+              <button
+                type="button"
+                className="h-fit"
+                onClick={() => setAddMessage(true)}
+              >
+                Add a message
+              </button>
+            }
+            {!gift &&
+              <button
+                className="fixed bottom-10 right-10"
+                onClick={() => save()}
+                disabled={saving}
+              >
+                Save
+              </button>
+            }
           </section>
           <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8 place-items-center">
             {initialMessages.map((m) => (
               <div key={m.id}>
                 <Tippy
                   placement={"right"}
-                  className="px-8 py-4 shadow-lg bg-red-50 max-w-xl"
+                  className="max-w-xl px-8 py-4 shadow-lg bg-red-50"
                   content={
                     <div>
                       <p className="text-xl lg:text-2xl">{m.message}</p>

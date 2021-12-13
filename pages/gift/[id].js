@@ -18,8 +18,8 @@ const Gift = ({ id, creator, title: initialTitle, messages: initialMessages }) =
                     <p className="text-xl lg:text-2xl">Tap the card to open it.</p>
                 </section>
                 <Tilt>
-                    <Link href={`/cards/${id}`} passHref>
-                        <div className="w-3/4 p-10 bg-white rounded-lg shadow-xl h-1/3 md:h-1/2 lg:w-1/2 lg:h-1/2">
+                    <Link href={`/cards/${id}?gift=true`} passHref>
+                        <div className="w-3/4 p-10 bg-white rounded-lg shadow-xl cursor-pointer h-1/3 md:h-1/2 lg:w-1/2 lg:h-1/2">
                             <h2>{initialTitle}</h2>
                             <p className="text-xl lg:text-2xl">
                                 Created by {creators.map((creator, index) => {
