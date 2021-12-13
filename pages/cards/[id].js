@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import useAuth from "../../utils/useAuth";
 import { useRouter } from "next/router";
 import Tippy from "@tippyjs/react";
+import Link from "next/link";
 
 const AddPrompt = ({ setSaving, id, user, setAddMessage }) => {
   const router = useRouter();
@@ -75,8 +76,16 @@ const Card = ({
   };
   return (
     <>
-      <div className="flex items-center justify-center">
-        <main className="w-9/12 min-h-screen p-16 my-32 space-y-10 shadow-2xl rounded-2xl">
+      <div className="my-32 flex flex-col items-center justify-center">
+        <p className="px-8 text-center text-lg">
+          Gift this card to someone by sending them this link:{" "}
+          <Link href={`/gift/${id}`}>
+            <a className="font-bold text-red-400">
+              https://cardcreator.vercel.app/gift/{id}
+            </a>
+          </Link>
+        </p>
+        <main className="w-9/12 min-h-screen p-16 space-y-10 shadow-2xl rounded-2xl">
           <section className="flex flex-col space-y-5 lg:flex-row lg:items-center lg:space-y-0">
             <section className="flex-grow space-y-2">
               <input
@@ -105,12 +114,12 @@ const Card = ({
               Save
             </button>
           </section>
-          <section className="space-y-5">
+          <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8 place-items-center">
             {initialMessages.map((m) => (
               <div key={m.id}>
                 <Tippy
                   placement={"right"}
-                  className="px-8 py-4 shadow-lg bg-gray-50 w-72"
+                  className="px-8 py-4 shadow-lg bg-red-50 max-w-xl"
                   content={
                     <div>
                       <p className="text-xl lg:text-2xl">{m.message}</p>
