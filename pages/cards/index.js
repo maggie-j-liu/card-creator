@@ -59,9 +59,9 @@ const Cards = () => {
                   <Link href={`/cards/${card.id}`} passHref>
                     <div className="p-5 transition-shadow border-2 border-red-300 rounded-lg shadow-lg cursor-pointer hover:shadow-3xl">
                       <h2>{card.title}</h2>
-                      <Link href={`/${card.id}`}>
+                      <Link href={`/cards/${card.id}`}>
                         <a className="font-mono">
-                          https://cardcreator.vercel.app/{card.id}
+                          https://cardcreator.vercel.app/cards/{card.id}
                         </a>
                       </Link>
                       {console.info(card)}
