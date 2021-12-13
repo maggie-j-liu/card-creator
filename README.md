@@ -16,7 +16,7 @@ Card Creator is a platform where people can create and share digital holiday car
 
 ![Someone typing into a text field](https://cloud-eusfbjwcl-hack-club-bot.vercel.app/1ezgif-6-84adf96362f3.gif)
 
-3. hare!
+3. Share!
 
 ![Image of someone copying a link to clipboard and opening it in a new window](https://cloud-eusfbjwcl-hack-club-bot.vercel.app/0ezgif-6-74cdd7413c63.gif)
 
