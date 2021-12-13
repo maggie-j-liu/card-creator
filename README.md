@@ -4,8 +4,6 @@
 Card Creator</h1>
 </div>
 
----
-
 ## The Project
 
 Card Creator is a platform where people can create and share digital holiday cards with anyone anywhere in the world!
