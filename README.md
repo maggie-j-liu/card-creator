@@ -1,6 +1,6 @@
 <div align="center">
-<img src="./public/icon.png" width="50">
-<h1>Card Creator 💌</h1>
+<h1><img src="./public/icon.png" width="50">
+Card Creator</h1>
 </div>
 
 ---
