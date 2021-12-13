@@ -44,8 +44,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Built by
 
-|                                                            |        |                                           GitHub | Twitter                                      |
-| :--------------------------------------------------------- | ------ | -----------------------------------------------: | -------------------------------------------- |
+|                                                            |        | GitHub                                           | Twitter                                      |
+| :--------------------------------------------------------- | :----- | :----------------------------------------------- | :------------------------------------------- |
 | <img src="https://github.com/maggie-j-liu.png" width="50"> | Maggie | [@maggie-j-liu](https://github.com/maggie-j-liu) |                                              |
 | <img src="https://github.com/arashnrim.png" width="50">    | Arash  | [@arashnrim](https://github.com/arashnrim)       |                                              |
 | <img src="https://github.com/eilla1.png" width="50">       | Ella   | [@eilla1](https://github.com/eilla1)             | [@eiilla11](https://twitter.com/eiilla11)    |
