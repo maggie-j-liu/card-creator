@@ -94,6 +94,7 @@ const Card = ({
                 type={"text"}
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+                disabled={gift}
                 className="w-full text-4xl font-bold lg:text-6xl"
               />
               <p className="flex items-center gap-2 text-lg lg:text-2xl">
