@@ -30,7 +30,6 @@ const Cards = () => {
     const { data } = await supabase.from("cards").insert({
       creator: user.id,
     });
-    console.log(data);
     router.push(`/cards/${data[0].id}`);
   };
   return (

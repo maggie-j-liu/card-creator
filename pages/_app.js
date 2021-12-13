@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
       <Meta />
-      {!(router.pathname.includes("/gift")) || !gift && <Navbar />}
+      {(!(router.pathname.includes("/gift")) || !gift) && <Navbar />}
       <Component {...pageProps} />
     </AuthProvider>
   );
