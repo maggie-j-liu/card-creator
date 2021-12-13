@@ -6,7 +6,16 @@ Card Creator</h1>
 
 ## The Project
 
-Card Creator is a platform where people can create and share digital holiday cards with anyone anywhere in the world!
+Card Creator is a platform where people can create and share digital holiday cards with anyone anywhere in the world! Every holiday season, the postal service becomes inundated with mail that there are [holiday shipping delays](https://www.cleveland.com/news/2021/11/us-postal-service-recommends-sending-packages-early-this-holiday-season.html) across the continent. To send holiday greetings to friends and family more reliably, people can use Card Creator!
+
+Create a card:
+![Someone clicking some buttons on a website](https://cloud-eusfbjwcl-hack-club-bot.vercel.app/2ezgif-6-e3187283111a.gif)
+
+Add messages:
+![Someone typing into a text field](https://cloud-eusfbjwcl-hack-club-bot.vercel.app/1ezgif-6-84adf96362f3.gif)
+
+Share!
+![Image of someone copying a link to clipboard and opening it in a new window](https://cloud-eusfbjwcl-hack-club-bot.vercel.app/0ezgif-6-74cdd7413c63.gif)
 
 ### Supabase
 
