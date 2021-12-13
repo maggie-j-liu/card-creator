@@ -1,5 +1,7 @@
-<img src="./public/icon.png" align="center">
-<h1 align="center">Card Creator 💌</h1>
+<div align="center">
+<img src="./public/icon.png" width="300">
+<h1>Card Creator 💌</h1>
+</div>
 
 ---
 
