@@ -44,9 +44,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Built by
 
-|                                                                   |                      GitHub                      | Twitter                                      |
-| :---------------------------------------------------------------: | :----------------------------------------------: | -------------------------------------------- |
-| <img src="https://github.com/maggie-j-liu.png" width="50"> Maggie | [@maggie-j-liu](https://github.com/maggie-j-liu) |                                              |
-|   <img src="https://github.com/arashnrim.png" width="50"> Arash   |    [@arashnrim](https://github.com/arashnrim)    |                                              |
-|     <img src="https://github.com/eilla1.png" width="50"> Ella     |       [@eilla1](https://github.com/eilla1)       | [@eiilla11](https://twitter.com/eiilla11)    |
-|   <img src="https://github.com/pranavnt.png" width="50"> Pranav   |     [@pranavnt](https://github.com/pranavnt)     | [@\_pranavnt](https://twitter.com/_pranavnt) |
+|                                                            |        |                                           GitHub | Twitter                                      |
+| :--------------------------------------------------------- | ------ | -----------------------------------------------: | -------------------------------------------- |
+| <img src="https://github.com/maggie-j-liu.png" width="50"> | Maggie | [@maggie-j-liu](https://github.com/maggie-j-liu) |                                              |
+| <img src="https://github.com/arashnrim.png" width="50">    | Arash  |       [@arashnrim](https://github.com/arashnrim) |                                              |
+| <img src="https://github.com/eilla1.png" width="50">       | Ella   |             [@eilla1](https://github.com/eilla1) | [@eiilla11](https://twitter.com/eiilla11)    |
+| <img src="https://github.com/pranavnt.png" width="50">     | Pranav |         [@pranavnt](https://github.com/pranavnt) | [@\_pranavnt](https://twitter.com/_pranavnt) |
