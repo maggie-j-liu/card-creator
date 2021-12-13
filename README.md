@@ -1,5 +1,6 @@
 <div align="center">
-<h1><img src="./public/icon.png" width="50">
+<img src="./public/icon.png" width="75">
+<h1>
 Card Creator</h1>
 </div>
 
