@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+<img src="./public/icon.png" width="75">
+<h1>
+Card Creator</h1>
+</div>
 
-## Getting Started
+## The Project
 
-First, run the development server:
+Card Creator is a platform where people can create and share digital holiday cards with anyone anywhere in the world! Every holiday season, the postal service becomes inundated with mail that there are [holiday shipping delays](https://www.cleveland.com/news/2021/11/us-postal-service-recommends-sending-packages-early-this-holiday-season.html) across the continent. To send holiday greetings to friends and family more reliably, people can use Card Creator!
+
+1. Create a card:
+
+![Someone clicking some buttons on a website](https://cloud-eusfbjwcl-hack-club-bot.vercel.app/2ezgif-6-e3187283111a.gif)
+
+2. Add messages:
+
+![Someone typing into a text field](https://cloud-eusfbjwcl-hack-club-bot.vercel.app/1ezgif-6-84adf96362f3.gif)
+
+3. Share!
+
+![Image of someone copying a link to clipboard and opening it in a new window](https://cloud-eusfbjwcl-hack-club-bot.vercel.app/0ezgif-6-74cdd7413c63.gif)
+
+### Supabase
+
+We used Supabase for authentication and store profile information so that users can go back and edit any cards they created. We also used the Supabase database to store data for the messages on the cards as well as the cards themselves.
+
+### Future
+
+As busy high school students, we were not able to finish the project before the deadline due to final exams and school activities. However, some features we would have liked to implement in our project are \***\*\_\_\*\***.
+
+## Develop
+
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
+yarn dev
+```
+
+Add environment variables:
+
+in `.env.local`
+
+```
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
+
+Then, run the development server:
+
+```bash
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Built by
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+|                                                            |        | GitHub                                           | Twitter                                      |
+| :--------------------------------------------------------- | :----- | :----------------------------------------------- | :------------------------------------------- |
+| <img src="https://github.com/maggie-j-liu.png" width="50"> | Maggie | [@maggie-j-liu](https://github.com/maggie-j-liu) |                                              |
+| <img src="https://github.com/arashnrim.png" width="50">    | Arash  | [@arashnrim](https://github.com/arashnrim)       |                                              |
+| <img src="https://github.com/eilla1.png" width="50">       | Ella   | [@eilla1](https://github.com/eilla1)             | [@eiilla11](https://twitter.com/eiilla11)    |
+| <img src="https://github.com/pranavnt.png" width="50">     | Pranav | [@pranavnt](https://github.com/pranavnt)         | [@\_pranavnt](https://twitter.com/_pranavnt) |
