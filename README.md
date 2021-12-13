@@ -5,6 +5,18 @@ Card Creator</h1>
 
 ---
 
+## The Project
+
+Card Creator is a platform where people can create and share digital holiday cards with anyone anywhere in the world!
+
+### Supabase
+
+We used Supabase for authentication and store profile information so that users can go back and edit any cards they created. We also used the Supabase database to store data for the messages on the cards as well as the cards themselves.
+
+### Future
+
+As busy high school students, we were not able to finish the project before the deadline due to final exams and school activities. However, some features we would have liked to implement in our project are **\_\_**.
+
 ## Develop
 
 First, install dependencies:
@@ -30,7 +42,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Built by
+## Built by
 
 |        |                      GitHub                      | Twitter                                      |
 | :----: | :----------------------------------------------: | -------------------------------------------- |
