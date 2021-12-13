@@ -21,7 +21,7 @@ const Navbar = () => {
             />
           </Link>
           <Link href="/cards">
-            <a>Create</a>
+            <a>Cards</a>
           </Link>
         </div>
         <div className="flex items-center">
